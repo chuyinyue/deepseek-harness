@@ -1,0 +1,14 @@
+<!-- dsh-service.xml -->
+<service>
+    <id>Deepseek-Harness</id>
+    <name>Deepseek-Harness</name>
+    <description>本地启动的Deepseek-Harness</description>
+    <logpath>D:\workspace\vscode\deepseek-harness\windows\service\logs\</logpath>
+    <logmode>roll</logmode>
+    <workingdirectory>D:\workspace\vscode\deepseek-harness</workingdirectory>
+    <executable>C:\Program Files\nodejs\node.exe</executable>
+    <arguments>apps\cli\lib\bin.js web --host 127.0.0.1 --port 3080</arguments>
+    <env name="DSH_HOME" value="C:\Users\cent\.dsh"/>
+    <onfailure action="restart" delay="5 sec"/>
+    <stoptimeout>15 sec</stoptimeout>
+</service>
