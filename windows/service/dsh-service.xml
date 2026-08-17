@@ -11,4 +11,10 @@
     <env name="DSH_HOME" value="C:\Users\cent\.dsh"/>
     <onfailure action="restart" delay="5 sec"/>
     <stoptimeout>15 sec</stoptimeout>
+    <serviceaccount>
+        <domain>.</domain>
+        <user>用户名</user>
+        <password>在这里填hdkj的登录密码</password>
+        <allowservicelogon>true</allowservicelogon>
+    </serviceaccount>
 </service>
